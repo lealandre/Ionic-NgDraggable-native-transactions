@@ -1,0 +1,33 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.telerik.plugins.nativepagetransitions": {
+            "PACKAGE_NAME": "ngDragableTest"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "ngDragableTest"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "ngDragableTest"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "ngDragableTest"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "ngDragableTest"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "ngDragableTest"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "ngDragableTest"
+        }
+    },
+    "dependent_plugins": {}
+}
