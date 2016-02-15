@@ -1,0 +1,29 @@
+<ion-view view-title="Search">
+    <ion-content>
+        <h1>Ng-Draggable example</h1>
+
+        <div class="row">
+            <div class="col" ng-repeat="obj in draggableObjects">
+                <div ng-drag="true" ng-drag-data="obj" data-allow-transform="true"> {{obj.name}} </div>
+            </div>
+        </div>
+
+        <span class="title">Drop area #1</span>
+        <div class="row" ng-drop="true" ng-drop-success="onDropComplete1($data,$event)">
+            <div class="col" ng-repeat="obj in droppedObjects1">
+                <div ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess1($data,$event)" ng-center-anchor="{{centerAnchor}}"> {{obj.name}} </div>
+            </div>
+        </div>
+
+        <!--<div ng-drop="true" ng-drop-success="onDropComplete1($data,$event)">
+            <span class="title">Drop area #1</span>
+
+            <div ng-repeat="obj in droppedObjects1" ng-drag="true" ng-drag-data="obj" ng-drag-success="onDragSuccess1($data,$event)" ng-center-anchor="{{centerAnchor}}">
+                {{obj.name}}
+            </div>
+
+        </div>-->
+
+
+    </ion-content>
+</ion-view>

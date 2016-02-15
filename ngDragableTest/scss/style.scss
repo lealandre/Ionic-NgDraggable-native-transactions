@@ -1,0 +1,98 @@
+﻿
+@import "colors.scss";
+
+[ng-drag]{
+        -moz-user-select: -moz-none;
+        -khtml-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+    [ng-drag]{
+        background: $my-assertive;
+        color:white;
+        text-align: center;
+        padding-top:40px;
+        display: inline-block;
+        cursor: move;
+        width:100%;
+        height:100%;
+    }
+    ul.draggable-objects:after{
+        display: block;
+        content:"";
+        clear:both;
+    }
+    .draggable-objects li{
+        float:left;
+        display: block;
+    }
+
+    [ng-drag].drag-over{
+        border:solid 1px $my-energized;
+    }
+    [ng-drag].dragging{
+        opacity: 0.5;
+        border:solid 3px $my-energized;
+    }
+    [ng-drop]{
+        @include border-radius(5px);
+        background: $my-drop-color;
+        text-align: center;
+        width: 100%;
+        height: 100px;
+        padding-top:90px;
+        margin:20px auto;
+        position: relative;
+    }
+    [ng-drop].drag-enter{
+        border:solid 5px $my-energized;
+    }
+    [ng-drop] span.title{
+        display: block;
+        position: absolute;
+        top:50%;
+        left:50%;
+        width: 200px;
+        height: 20px;
+        margin-left: -100px;
+        margin-top: -10px;
+    }
+    [ng-drop] div{
+        position: relative;
+        z-index: 2;
+    }
+
+
+.row {
+    padding:0;
+}
+
+.row + .row {
+     margin-top: 10px; 
+     padding-top: 0; 
+}
+
+.col {
+    height:100px;
+    padding: 0 5px;
+}
+
+
+.my-view {
+    background: $dark;
+    color: $calm;
+}
+
+.my-other-view{
+    @extend .my-view;
+    font-size:20px;
+}
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
